@@ -232,10 +232,6 @@ header {
 
     #select-year,
     #select-country {
-    padding: 5px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px; /* Marge à droite pour l'espacement */
+        margin-bottom: 10px;
     }
 }
