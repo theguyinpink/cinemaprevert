@@ -218,7 +218,7 @@ header {
     }
 
     #search-input {
-        width: 100%; /* Occuper la largeur sur les téléphones */
+        width: 35%; /* Occuper la largeur sur les téléphones */
     }
 
     #search-button {
