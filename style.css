@@ -204,30 +204,30 @@ header {
 
 /* Styles pour les téléphones mobiles */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Réduire la taille de la police pour les petits écrans */
-    }
-
-    .film-title {
-        min-width: auto; /* Ajuster la largeur minimale pour les petits écrans */
-        padding: 20px; /* Augmenter l'espace intérieur pour le contenu */
-    }
-
-    .film-details {
-        padding: 20px; /* Augmenter l'espace intérieur pour le contenu */
-    }
-
-    .film-item {
-        min-width: auto; /* Ajuster la largeur minimale pour les petits écrans */
-        padding: 10px; /* Augmenter l'espace intérieur pour le contenu */
-    }
-
-    .container1 {
-        width: 90%; /* Utiliser plus de largeur pour le contenu sur les petits écrans */
-    }
-
     header {
-        padding: 10px; /* Réduire l'espace intérieur de l'en-tête pour gagner de l'espace */
+        font-size: 16px; /* Réduire la taille de la police sur les téléphones */
+    }
+
+    .container {
+        padding: 10px; /* Réduire la marge intérieure sur les téléphones */
+    }
+
+    .search-container {
+        text-align: center; /* Centrer sur les téléphones */
+        margin-bottom: 10px; /* Réduire l'espacement en bas sur les téléphones */
+    }
+
+    #search-input {
+        width: 100%; /* Occuper la largeur sur les téléphones */
+    }
+
+    #search-button {
+        padding: 8px 16px; /* Réduire le rembourrage du bouton sur les téléphones */
+    }
+
+    .filter-menu, .sort-menu {
+        flex-direction: column; /* Disposition verticale sur les téléphones */
+        align-items: center; /* Centrer les éléments sur les téléphones */
     }
 }
 
