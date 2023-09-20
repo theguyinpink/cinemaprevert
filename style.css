@@ -218,11 +218,11 @@ header {
     }
 
     #search-input {
-        width: 35%; /* Occuper la largeur sur les téléphones */
+        width: 10%; /* Occuper la largeur sur les téléphones */
     }
 
     #search-button {
-        padding: 8px 16px; /* Réduire le rembourrage du bouton sur les téléphones */
+        padding: 6px 10px; /* Réduire le rembourrage du bouton sur les téléphones */
     }
 
     .filter-menu, .sort-menu {
