@@ -1,0 +1,158 @@
+
+body {
+background: #000;
+color: #fff;
+background-repeat: no-repeat;
+min-height: 100vh;
+font-size: 20;
+font-family: 'Courier New', Courier, monospace;
+justify-content: center;
+margin: 0;
+}
+#intro{
+    
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+#start-button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+#start-button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #222;
+}
+
+
+
+.film-title {
+    cursor: pointer;
+    color: black;
+    background: #333;
+    margin-bottom: 10px;
+    text-decoration: none;
+    min-height: 30px;
+    min-width: 500px; /* Largeur minimale pour film-title */
+    flex: 1; /* Pour que la liste occupe tout l'espace restant */
+    padding: 200px;
+    border-right: 1px solid #555; /* Séparation entre le menu et la liste */
+    overflow-y: auto; /* Ajoutez une barre de défilement si nécessaire */
+    margin: 200px auto; /* Centre le texte horizontalement */
+    max-width: 800px; /* Limite la largeur à 800 pixels (ajustez selon vos besoins) */
+    text-align: center;
+}
+
+
+
+.film-details {
+    background: #333;
+    display: none;
+    margin-left: 20px;
+    text-decoration: none;
+    text-align: center;
+    flex: 2; /* Pour que les détails occupent plus d'espace que le menu */
+    padding: 10px; /* Hauteur minimale pour film-details */
+    margin: 0 auto; /* Centre le texte horizontalement */
+    max-width: 800px; /* Limite la largeur à 800 pixels (ajustez selon vos besoins) */
+    border-left: 1px solid #555;
+}
+
+
+
+.affiche {
+    margin-left: 30px;
+}
+
+
+.banniere{
+    color: #333;
+}
+/* Dans votre fichier CSS (styles.css) */
+#film-container {
+    background: #222;
+    display: flex;
+    padding: 10px; /* Hauteur minimale pour film-details */
+    margin: 0 auto; /* Centre le texte horizontalement */
+    max-width: 800px; /* Limite la largeur à 800 pixels (ajustez selon vos besoins) */
+}
+
+
+.container1{
+    border: 2px solid #555;
+    margin: 20px auto;
+    border-radius: 0.8em;
+    width: 70%;
+    color: #ffffff;
+}
+
+
+.text{
+    text-align: center;
+}
+
+.text2{
+    text-align: center;
+}
+
+
+
+
+.film-item {
+    border: 2px solid #000000; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+}
+
+/* Styles pour les téléphones mobiles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Réduire la taille de la police pour les petits écrans */
+    }
+
+    .film-title {
+        min-width: auto; /* Ajuster la largeur minimale pour les petits écrans */
+        padding: 20px; /* Augmenter l'espace intérieur pour le contenu */
+    }
+
+    .film-details {
+        padding: 20px; /* Augmenter l'espace intérieur pour le contenu */
+    }
+
+    .film-item {
+        min-width: auto; /* Ajuster la largeur minimale pour les petits écrans */
+        padding: 10px; /* Augmenter l'espace intérieur pour le contenu */
+    }
+
+    .container1 {
+        width: 90%; /* Utiliser plus de largeur pour le contenu sur les petits écrans */
+    }
+
+    header {
+        padding: 10px; /* Réduire l'espace intérieur de l'en-tête pour gagner de l'espace */
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Films</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="films-page">
+    <div id="intro">
+        
+        <button id="start-button">Entrer dans le site</button>
+    </div>
+    <header class="container1">
+        <h1>Bienvenue à Cinéma Prévert</h1>
+        <p>Liste des films</p>
+    </header> 
+
+
+    <aside id="menu">
+        <!-- Votre menu ici -->
+    </aside>
+    <label for="select-year">Année :</label>
+<select id="select-year">
+    <option value="Tous">Tous</option>
+    <!-- Ajoutez ici les options pour les années -->
+</select>
+
+<label for="select-country">Pays :</label>
+<select id="select-country">
+    <option value="Tous">Tous</option>
+    <!-- Ajoutez ici les options pour les pays -->
+</select>
+<div id="sort-container">
+    <label for="sort-year">Trier par année :</label>
+    <select id="sort-year">
+        <option value="none">Aucun</option>
+        <option value="asc">Année croissante</option>
+        <option value="desc">Année décroissante</option>
+    </select>
+    
+    <label for="sort-title">Trier par titre :</label>
+    <select id="sort-title">
+        <option value="none">Aucun</option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+    </select>
+    
+    <button id="sort-button">Trier</button>
+</div>
+
+    <div id="film-container">
+        <div id="film-list">
+            <!-- Cette liste sera remplie par JavaScript -->
+        </div>
+
+        <div id="film-details">
+            <!-- Les détails du film seront affichés ici -->
+        </div>
+
+    </div>
+
+
+    <script src="films.js"></script>
+
+</body>
+</html>
