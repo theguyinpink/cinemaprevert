@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const selectYear = document.getElementById('select-year');
             const selectCountry = document.getElementById('select-country');
             const sortButton = document.getElementById('sort-button');
-            const searchInput = document.getElementById('search-input');
-            const searchButton = document.getElementById('search-button');
 
             // Créer une liste d'années uniques à partir des données JSON
             const uniqueYears = [...new Set(data.map(film => film.year))];
@@ -94,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const selectedCountry = selectCountry.value;
                 filtrerFilms(selectedYear, selectedCountry);
             });
+            
 
             // Gestionnaire d'événements pour le tri des films
             sortButton.addEventListener('click', () => {
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 filmItems.forEach(item => {
                     const filmAnnee = item.querySelector('p:nth-child(2)').textContent.split(':')[1].trim();
                     const filmPays = item.querySelector('p:nth-child(3)').textContent.split(':')[1].trim();
-
+            
                     // Affichez les films correspondants aux critères de filtrage, cachez les autres
                     if ((annee === 'Tous' || filmAnnee === annee) && (pays === 'Tous' || filmPays === pays)) {
                         item.style.display = 'block';
@@ -170,32 +169,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Ajouter l'élément de film à la liste
                 filmList.appendChild(filmElement);
             });
-
-                        // Fonction pour filtrer et afficher les résultats de la recherche
-                        function rechercherFilms(motCle) {
-                            const filmItems = document.querySelectorAll('.film-item');
-                            filmItems.forEach(item => {
-                                const filmTitre = item.querySelector('h2').textContent.toLowerCase();
-                                if (filmTitre.includes(motCle.toLowerCase())) {
-                                    item.style.display = 'block';
-                                } else {
-                                    item.style.display = 'none';
-                                }
-                            });
-                        }
-            
-                        // Gestionnaire d'événements pour le bouton "Rechercher"
-                        searchButton.addEventListener('click', () => {
-                            const motCle = searchInput.value.trim();
-                            rechercherFilms(motCle);
-                        });
-            
-                        // Gestionnaire d'événements pour la touche "Entrée" dans la barre de recherche
-                        searchInput.addEventListener('keyup', event => {
-                            if (event.key === 'Enter') {
-                                const motCle = searchInput.value.trim();
-                                rechercherFilms(motCle);
-                            }
-                        });
         });
 });
