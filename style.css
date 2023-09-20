@@ -122,6 +122,86 @@ header {
     margin-bottom: 10px; 
 }
 
+#search-input {
+    padding: 10px;
+    border: 2px solid #333; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    width: 300px; /* Largeur de la barre de recherche */
+    margin-bottom: 10px; /* Marge en bas pour l'espacement */
+    font-size: 16px; /* Taille de la police */
+    float: right; /* Aligner à droite */
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur pointeur au survol */
+    float: right; /* Aligner à droite */
+    margin-right: 10px;
+}
+
+/* Style du bouton de recherche au survol */
+#search-button:hover {
+    background-color: #555; /* Couleur de fond au survol */
+}
+
+#select-year,
+#select-country {
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Marge à droite pour l'espacement */
+}
+
+/* Style du bouton de tri */
+#sort-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style du bouton de tri au survol */
+#sort-button:hover {
+    background-color: #555;
+}
+
+#sort-year{
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Marge à droite pour l'espacement */
+    background-color: #fff;
+    color: #333;
+}
+
+#sort-title{
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Marge à droite pour l'espacement */
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+
+
+
+
+
 /* Styles pour les téléphones mobiles */
 @media (max-width: 768px) {
     body {
