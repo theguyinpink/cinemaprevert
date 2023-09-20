@@ -222,7 +222,7 @@ header {
     }
 
     #search-button {
-        padding: 4px 6px; /* Réduire le rembourrage du bouton sur les téléphones */
+        padding: 6px 10px; /* Réduire le rembourrage du bouton sur les téléphones */
     }
 
     .filter-menu, .sort-menu {
@@ -236,3 +236,9 @@ header {
         margin-top: 10px;
     }
 }
+
+
+
+
+
+
