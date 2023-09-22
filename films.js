@@ -14,24 +14,24 @@ document.addEventListener('DOMContentLoaded', function () {
         'US': 'États-Unis',
         'FR': 'France',
         'DE': 'Allemagne',
-        'GB': 'Royaume-Uni',
-        'CA': 'Canada',
-        'AU': 'Australie',
-        'IT': 'Italie',
-        'ES': 'Espagne',
-        'JP': 'Japon',
-        'BR': 'Brésil',
-        'NZ': 'Nouvelle-Zélande',
-        'CN': 'Chine',
-        'SE': 'Suède',
-        'RU': 'Russie',
-        'NL': 'Pays-Bas',
-        'HK': 'Hong Kong',
-        'NO': 'Norvège',
-        'CZ': 'République tchèque',
-        'BE': 'Belgique',
-        'IE': 'Irlande',
-        'KR': 'Corée du Sud',
+        'GB': 'Royaume-Uni', 
+        'CA': 'Canada', 
+        'AU': 'Australie', 
+        'IT': 'Italie', 
+        'ES': 'Espagne', 
+        'JP': 'Japon', 
+        'BR': 'Brésil', 
+        'NZ': 'Nouvelle-Zélande', 
+        'CN': 'Chine', 
+        'SE': 'Suède', 
+        'RU': 'Russie', 
+        'NL': 'Pays-Bas', 
+        'HK': 'Hong Kong', 
+        'NO': 'Norvège', 
+        'CZ': 'République tchèque', 
+        'BE': 'Belgique', 
+        'IE': 'Irlande', 
+        'KR': 'Corée du Sud'
         // Ajoutez d'autres correspondances pour les pays ici
     };
 
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
             selectCountry.addEventListener('change', () => {
                 const selectedYear = selectYear.value;
                 const selectedCountry = selectCountry.value;
+                console.log('Pays sélectionné:', selectedCountry); // Vérifiez la valeur sélectionnée
                 filtrerFilms(selectedYear, selectedCountry);
             });
-            
 
             // Gestionnaire d'événements pour le tri des films
             sortButton.addEventListener('click', () => {
@@ -108,8 +108,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     const filmAnnee = item.querySelector('p:nth-child(2)').textContent.split(':')[1].trim();
                     const filmPays = item.querySelector('p:nth-child(3)').textContent.split(':')[1].trim();
             
+                    console.log('Année du film:', filmAnnee);
+                    console.log('Pays du film:', filmPays);
+                    console.log('Année sélectionnée:', annee);
+                    console.log('Pays sélectionné:', pays);
+
+                            // Convertir les valeurs en minuscules pour la comparaison
+                            const filmPaysEnMinuscules = filmPays.toLowerCase();
+                            const paysEnMinuscules = pays.toLowerCase();
+            
                     // Affichez les films correspondants aux critères de filtrage, cachez les autres
-                    if ((annee === 'Tous' || filmAnnee === annee) && (pays === 'Tous' || filmPays === pays)) {
+                    if ((annee === 'Tous' || filmAnnee === annee) && (pays === 'Tous' || filmPaysEnMinuscules === paysEnMinuscules)) {
                         item.style.display = 'block';
                     } else {
                         item.style.display = 'none';
@@ -169,5 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Ajouter l'élément de film à la liste
                 filmList.appendChild(filmElement);
             });
+        })
+        .catch(error => {
+            console.error('Erreur lors du chargement des données JSON:', error);
         });
 });
